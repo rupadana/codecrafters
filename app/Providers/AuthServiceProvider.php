@@ -3,7 +3,10 @@
 namespace App\Providers;
 
 // use Illuminate\Support\Facades\Gate;
+
+use App\Policies\TokenPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Rupadana\ApiService\Models\Token;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -13,7 +16,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array<class-string, class-string>
      */
     protected $policies = [
-        //
+        Token::class => TokenPolicy::class
     ];
 
     /**

@@ -36,5 +36,6 @@ Artisan::command('test', function () {
         ->icon('heroicon-o-megaphone')
         ->body('Filament can now show very important message to all or specific users!')
         ->color('52,144,220')
+        ->duration(2000)
         ->announceTo($user);
 });

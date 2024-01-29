@@ -17,6 +17,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Rupadana\ApiService\ApiServicePlugin;
 use Rupadana\FilamentAnnounce\FilamentAnnouncePlugin;
 use Rupadana\FilamentDashboardNotification\FilamentDashboardNotificationPlugin;
 use Rupadana\FilamentPanelSetting\FilamentPanelSettingPlugin;
@@ -35,8 +36,9 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins([
                 // FilamentPanelSettingPlugin::make(),
+                ApiServicePlugin::make(),
                 FilamentAnnouncePlugin::make()
-                    ->pollingInterval('5s')
+                    ->pollingInterval('5s'),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')

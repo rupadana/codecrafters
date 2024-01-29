@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c044fa414e09595d5e675a46071bf68b",
+    "content-hash": "5aafd639270e1cc585457e0c188f1b79",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -71,6 +71,91 @@
                 "source": "https://github.com/AnourValar/eloquent-serialize/tree/1.2.17"
             },
             "time": "2023-12-06T15:54:01+00:00"
+        },
+        {
+            "name": "bezhansalleh/filament-shield",
+            "version": "3.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bezhanSalleh/filament-shield.git",
+                "reference": "ad9f6ff556e3fb28199f376d8194bd0c833633c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bezhanSalleh/filament-shield/zipball/ad9f6ff556e3fb28199f376d8194bd0c833633c0",
+                "reference": "ad9f6ff556e3fb28199f376d8194bd0c833633c0",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^3.2",
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.9",
+                "spatie/laravel-permission": "^6.0"
+            },
+            "require-dev": {
+                "larastan/larastan": "^2.0",
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^7.0",
+                "orchestra/testbench": "^8.0",
+                "pestphp/pest": "^2.10",
+                "phpstan/extension-installer": "^1.3",
+                "phpstan/phpstan-deprecation-rules": "^1.1",
+                "phpstan/phpstan-phpunit": "^1.3",
+                "phpunit/phpunit": "^10.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BezhanSalleh\\FilamentShield\\FilamentShieldServiceProvider"
+                    ],
+                    "aliases": {
+                        "FilamentShield": "BezhanSalleh\\FilamentShield\\Facades\\FilamentShield"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BezhanSalleh\\FilamentShield\\": "src",
+                    "BezhanSalleh\\FilamentShield\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bezhan Salleh",
+                    "email": "bezhan_salleh@yahoo.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Filament support for `spatie/laravel-permission`.",
+            "homepage": "https://github.com/bezhansalleh/filament-shield",
+            "keywords": [
+                "acl",
+                "bezhanSalleh",
+                "filament",
+                "filament-shield",
+                "laravel",
+                "permission",
+                "permissions",
+                "rbac",
+                "roles",
+                "security"
+            ],
+            "support": {
+                "issues": "https://github.com/bezhanSalleh/filament-shield/issues",
+                "source": "https://github.com/bezhanSalleh/filament-shield/tree/3.2.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/bezhanSalleh",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-01-25T12:30:44+00:00"
         },
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -4952,26 +5037,22 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/rupadana/packages/rupadana/filament-dashboard-notification",
-                "reference": "72d17d03f15ff2465900169d8df49f6d0a8e5553"
+                "reference": "1f08ba9349c2bd6f097b403044ca4c5a5e634396"
             },
             "require": {
                 "filament/filament": "^3.0",
+                "guava/filament-icon-picker": "^2.0",
                 "illuminate/contracts": "^10.0",
                 "php": "^8.1",
                 "spatie/laravel-package-tools": "^1.15.0"
             },
             "require-dev": {
-                "laravel/pint": "^1.0",
                 "nunomaduro/collision": "^7.9",
-                "nunomaduro/larastan": "^2.0.1",
                 "orchestra/testbench": "^8.0",
                 "pestphp/pest": "^2.0",
                 "pestphp/pest-plugin-arch": "^2.0",
                 "pestphp/pest-plugin-laravel": "^2.0",
-                "phpstan/extension-installer": "^1.1",
-                "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "spatie/laravel-ray": "^1.26"
+                "phpunit/phpunit": "^10.0.17"
             },
             "type": "library",
             "extra": {
@@ -5045,10 +5126,10 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/rupadana/packages/rupadana/filament-api-service",
-                "reference": "b174902b1479227967d6cbdb26e2d52f36897ad8"
+                "reference": "39ad6c3d31fd1cc57edaaf460e04cbaad8839208"
             },
             "require": {
-                "filament/filament": "^3.0",
+                "filament/filament": "^3.2",
                 "illuminate/contracts": "^10.0",
                 "laravel/framework": "^10.10",
                 "laravel/sanctum": "^3.2",
@@ -5068,7 +5149,8 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Rupadana\\ApiService\\ApiServiceServiceProvider"
+                        "Rupadana\\ApiService\\ApiServiceServiceProvider",
+                        "Rupadana\\ApiService\\AuthServiceProvider"
                     ],
                     "aliases": {
                         "ApiService": "Rupadana\\ApiService\\Facades\\ApiService"
@@ -5109,7 +5191,10 @@
             "description": "A simple api service for supporting filamentphp",
             "homepage": "https://github.com/rupadana/api-service",
             "keywords": [
+                "api",
                 "api-service",
+                "filament",
+                "filament api",
                 "laravel",
                 "rupadana"
             ],
@@ -5468,6 +5553,88 @@
                 }
             ],
             "time": "2024-01-11T08:43:00+00:00"
+        },
+        {
+            "name": "spatie/laravel-permission",
+            "version": "6.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-permission.git",
+                "reference": "4d119986c862ac0168b77338c85d8236bb559a88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/4d119986c862ac0168b77338c85d8236bb559a88",
+                "reference": "4d119986c862ac0168b77338c85d8236bb559a88",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/auth": "^8.12|^9.0|^10.0|^11.0",
+                "illuminate/container": "^8.12|^9.0|^10.0|^11.0",
+                "illuminate/contracts": "^8.12|^9.0|^10.0|^11.0",
+                "illuminate/database": "^8.12|^9.0|^10.0|^11.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "laravel/passport": "^11.0",
+                "orchestra/testbench": "^6.23|^7.0|^8.0|^9.0",
+                "phpunit/phpunit": "^9.4|^10.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "6.x-dev",
+                    "dev-master": "6.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Permission\\PermissionServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Spatie\\Permission\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Permission handling for Laravel 8.0 and up",
+            "homepage": "https://github.com/spatie/laravel-permission",
+            "keywords": [
+                "acl",
+                "laravel",
+                "permission",
+                "permissions",
+                "rbac",
+                "roles",
+                "security",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-permission/issues",
+                "source": "https://github.com/spatie/laravel-permission/tree/6.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-12-24T06:58:02+00:00"
         },
         {
             "name": "spatie/laravel-query-builder",
@@ -11382,7 +11549,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "rupadana/filament-announce": 20,
-        "rupadana/filament-api-service": 20,
         "rupadana/filament-swiper": 20
     },
     "prefer-stable": true,
